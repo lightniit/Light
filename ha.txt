@@ -1,0 +1,215 @@
+create database if not exists ha;
+
+use ha;
+
+create table if not exists student
+
+(
+
+ID varchar(20) primary key,
+
+Name varchar(20),
+
+DOB date,
+EYear int,
+
+phone varchar(20),
+
+Hometown varchar(20),
+
+Gender varchar(1),
+
+Mayjor varchar(20),
+
+Class  varchar(20)
+
+);
+
+
+insert into student values ('2018001','Zhang Zixin','2000-2-2',2018,'15348756235','Hunan','F','Software','B5');
+
+insert into student values ('2018002','Zhong Yiming','2000-4-4',2018,'12254785693','Guangzhou','M','Math','A4');
+
+insert into student values ('2018003','Liu Ziyu','2000-6-6',2018,'13378456922','Beijing','M','Software','B6');
+
+
+select * from student;
+
+
+create table if not exists course
+
+(
+
+SID varchar(20),
+
+SU varchar(20),
+
+MO varchar(20),
+
+TU varchar(20),
+
+WE varchar(20),
+
+TH varchar(20),
+
+FR varchar(20),
+
+SA varchar(20)
+
+);
+
+
+insert into course values   ('B5','','Math','English','Math','English','Math',''),
+
+                          ('B5','','English','','','Software','P.E',''),
+ 
+                         ('B5','','','','','','',''),
+
+                          ('B5','','Software','','','','Software',''),
+ 
+                         ('B5','','Computer','','','Computer','Software',''),
+
+                          ('B5','','','','','','',''),
+
+						  ('B5','','Database','','Career','','Psychology','');
+
+insert into course values   ('A4','','English','Math','Math','Math','Psychology',''),
+
+						  ('A4','','Statistics','Statistics','Statistics','','',''),
+
+						  ('A4','','','','','','',''),
+	
+					  ('A4','','Career','','algebra','','Psychology',''),
+
+						  ('A4','','','algebra','','','algebra',''),
+
+						  ('A4','','','','','','',''),
+
+                          ('A4','','Review','','','','Review',''),
+
+                          ('B6','','English','Math','English','Math','',''),
+
+                          ('B6','','Math','','Software','','P.E',''),
+
+                          ('B6','','','','','','',''),
+
+                          ('B6','','','Software','','Software','',''),
+
+                          ('B6','','','Computer','Computer','','Software',''),
+
+                          ('B6','','','','','','Psychology',''),
+
+						  ('B6','','','Database','','Career','','');
+
+
+
+
+
+
+select SU,MO,TU,WE,TH,FR,SA from cou where SID='B5';
+
+
+create table if not exists Message
+(
+
+info varchar(200)
+);
+
+
+insert into message values ('Welcome! ');
+
+create table if not exists teable
+ 
+(
+    TN int,
+
+
+    SU varchar(20),
+
+
+    MO varchar(20),
+
+ 
+   TU varchar(20),
+
+
+    WE varchar(20),
+ 
+
+   TH varchar(20),
+
+
+    FR varchar(20),
+
+
+    SA varchar(20)
+
+
+    );
+ 
+
+                 
+   insert into teable values
+
+                                                                        (1,'','B5','','B5','','B5',''),
+
+	
+			        (1,'','B6','B6','','B6','',''),
+
+
+			                         (1,'','','','','','',''),
+
+
+			                          (1,'','','','','','',''),
+
+
+			                          (1,'','','','','','',''),
+
+ 
+                                                                          (1,'','','A4','','A4','',''),
+
+
+				          (1,'','','','','','',''),
+
+
+				          (2,'','','','','','',''),
+
+
+				          (2,'','','','','','',''),
+
+
+				          (2,'','','','','','',''),
+
+
+				          (2,'','','','A4','','',''),
+
+
+				          (2,'','A4','','A4','','',''),
+
+
+				          (2,'','','','','','',''),
+
+
+				          (2,'','','','','','','');
+
+
+create table if not exists admin
+(
+ID varchar(20) primary key,
+password varchar(20),
+name varchar(20)
+);
+insert into admin values ('001','123456','Youdi');
+create table if not exists teacher
+(
+ID varchar(20) primary key,
+password varchar(20),
+name varchar(20)
+);
+insert into teacher values ('201801','123456','Bishop'),('201802','123456','Mary');
+create table if not exists mark(ID varchar(20) primary key,Name varchar(20),CN varchar(4),MATH varchar(4),EN varchar(4)) ;
+insert into mark values ('2018001','Zhang Zixin','','','',''),('2018002','Zhong Yiming','','','',''),('2018003','Liu Ziyu','','','','');
+
+
+
+
